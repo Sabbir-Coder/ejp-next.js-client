@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
+import Logo from './Logo'
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="max-w-7xl mx-auto navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -11,7 +12,7 @@ export default function Navbar() {
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-999 mt-3 w-52 p-2 shadow">
                         <li><Link href='/'>Home</Link></li>
                         <li> <Link href='/products'>All Products</Link></li>
                         <li> <Link href='/add-product'>Add Product</Link></li>
@@ -19,7 +20,7 @@ export default function Navbar() {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <div className=""><Logo/></div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -31,7 +32,7 @@ export default function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link href='auth/login' className="btn">Login</Link>
+                <button><Link  href='auth/login'>Login</Link></button>
             </div>
         </div>
   )
