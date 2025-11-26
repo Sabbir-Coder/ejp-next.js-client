@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 export default async function ProductPage() {
-  const data = await fetch('http://localhost:5000/products')
+  const data = await fetch('ejp-next-js-server.vercel.app/products')
   const products = await data.json()
   // console.log(products);
 
@@ -19,7 +19,7 @@ export default async function ProductPage() {
         </div>
 
       </ol>
-     
+
     </div>
   )
 }

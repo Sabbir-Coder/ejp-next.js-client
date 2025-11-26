@@ -5,14 +5,14 @@ import React from 'react'
 export default async function ProductDetails({ params }) {
 
   const { productId } = await params;
-// console.log(productId);
+  // console.log(productId);
 
-  const res = await fetch(`http://localhost:5000/products/${productId}`)
-  const product= await res.json()
+  const res = await fetch(`ejp-next-js-server.vercel.app/products/${productId}`)
+  const product = await res.json()
 
 
   return (
- <div className="max-w-5xl mx-auto px-5 py-10">
+    <div className="max-w-5xl mx-auto px-5 py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
         {/* Left: Product Image */}
