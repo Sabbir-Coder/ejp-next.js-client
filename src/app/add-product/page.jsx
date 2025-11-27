@@ -12,8 +12,10 @@ export default function AddProduct() {
 
     const title = e.target.name.value;
     const description = e.target.description.value;
+    const longDescription = e.target.longDescription.value;
     const price = e.target.price.value;
     const productImage = e.target.imageURL.files[0];
+    
 
     const formData = new FormData();
     formData.append("image", productImage);
@@ -29,9 +31,11 @@ export default function AddProduct() {
       const newProduct = {
         title,
         description,
+        longDescription,
         price,
         image: uploadedImageUrl,
       };
+console.log(newProduct);
 
       // POST Product to Server
       const res = await fetch(
@@ -95,10 +99,18 @@ export default function AddProduct() {
             className="file-input bg-white"
           />
 
-          <label className="label">Description</label>
+          <label className="label">Short Description</label>
           <textarea
             required
             name="description"
+            className="textarea bg-white"
+            placeholder="Product Short Description"
+            
+          ></textarea>
+          <label className="label">Long Description</label>
+          <textarea
+            required
+            name="longDescription"
             className="textarea bg-white"
             placeholder="Product Description"
             rows={5}

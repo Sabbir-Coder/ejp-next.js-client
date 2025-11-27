@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Client() {
     return (
-        <div className='max-w-6xl mx-auto mb-5 flex justify-around'>
+        <div className='max-w-6xl mx-auto mb-5 gap-6 grid grid-cols-2 md:grid-cols-4 justify-around'>
             <div className='text-center'>
                 <h1 className='font-bold text-3xl'>8+ years</h1>
                 <p className='text-gray-600 text-lg'>experience</p>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import MarqueeP from "@/components/MarqueeP";
 import Client from "@/components/Client";
 import Examples from "@/components/HomeComponents/Examples";
+import FeaturedCollection from "@/components/HomeComponents/FeaturedCollection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <MarqueeP />
       <Client />
       <Feature />
+      <FeaturedCollection/>
       <Examples />
       <StayConnected />
     </div>
