@@ -8,7 +8,7 @@ export default function ProductPage() {
   const [sortOrder, setSortOrder] = useState(''); // '' | 'low-high' | 'high-low'
 
   useEffect(() => {
-    fetch('ejp-next-js-server.vercel.app/products')
+    fetch('https://ejp-next-js-server.vercel.app/products')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error(err));
@@ -35,16 +35,16 @@ export default function ProductPage() {
 
   return (
     <div className='max-w-7xl mx-auto'>
-      <h1 className='text-center text-5xl font-bold mt-5'>
+      <h1 className='text-5xl font-bold mt-4 bg-linear-to-r from-purple-900 via-blue-500 to-green-100 bg-clip-text text-transparent text-center py-5'>
         Manage Products
       </h1>
-      <p className='text-center md:w-2/3 mt-5 text-gray-600 mx-auto'>
+      <p className='text-center md:w-2/3 mt-3 text-gray-600 mx-auto'>
         Manage Your Entire Product Catalog Effortlessly — View, Edit, and Keep Track of Every Item in One Place.
       </p>
 
-      <div className='flex flex-col md:flex-row justify-between items-center gap-4 mt-6 mb-6'>
-        {/* Search */}
-        <label className="input flex items-center gap-2 grow md:grow-0">
+      <div className='flex flex-col md:flex-row justify-between items-center gap-4 mt-14'>
+    
+        <label className="input border border-gray-300 bg-white flex items-center gap-2 grow md:grow-0">
           <svg className="h-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
               <circle cx="11" cy="11" r="8"></circle>
@@ -60,11 +60,11 @@ export default function ProductPage() {
           />
         </label>
 
-        {/* Sort */}
+    
         <select
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
-          className="select border border-gray-300 rounded px-2 py-1"
+          className="select bg-white border border-gray-300 rounded px-2 py-1"
         >
           <option value="">Sort By Price</option>
           <option value="low-high">Low → High</option>
@@ -72,7 +72,7 @@ export default function ProductPage() {
         </select>
       </div>
 
-      <div className='my-18'>
+      <div className='my-10'>
         <p className='mb-4 font-semibold'>Total Products: {displayedProducts.length}</p>
         {displayedProducts.map((product, index) => (
           <ManagePCard

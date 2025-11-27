@@ -7,7 +7,7 @@ export default async function ProductDetails({ params }) {
   const { productId } = await params;
   // console.log(productId);
 
-  const res = await fetch(`ejp-next-js-server.vercel.app/products/${productId}`)
+  const res = await fetch(`https://ejp-next-js-server.vercel.app/products/${productId}`)
   const product = await res.json()
 
 

@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Swal from "sweetalert2";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { IoArrowRedo } from "react-icons/io5";
 
 export default function ManagePCard({ product, onDelete, index }) {
 
@@ -19,7 +21,7 @@ export default function ManagePCard({ product, onDelete, index }) {
 
         if (result.isConfirmed) {
             try {
-                const res = await fetch(`ejp-next-js-server.vercel.app/products/${_id}`, {
+                const res = await fetch(`https://ejp-next-js-server.vercel.app/products/${_id}`, {
                     method: 'DELETE'
                 });
                 const data = await res.json();
@@ -40,8 +42,8 @@ export default function ManagePCard({ product, onDelete, index }) {
     };
 
     return (
-        <div className="h-20 mb-2.5 rounded-lg px-3 md:px-10 bg-[#d4d4d4] w-full flex justify-center items-center">
-            <p className="font-bold mr-8">
+        <div className="h-20 mb-2.5 rounded-lg px-1 md:px-10 bg-[#d4d4d4] w-full flex justify-center items-center">
+            <p className="font-bold mr-1 md:mr-8">
                 {index + 1}.
             </p>
             <div className="flex-1">
@@ -54,16 +56,17 @@ export default function ManagePCard({ product, onDelete, index }) {
                     />
                 </div>
             </div>
-            <div className="flex-1 font-semibold">
+            <div className="flex-2 mx-1 font-semibold">
                 <h1>{product.title}</h1>
             </div>
-            <div className="flex-1 font-bold text-blue-800">
+            <div className="font-bold md:flex-1 text-blue-800">
                 <h1>${product.price}</h1>
             </div>
             <button
                 onClick={() => handleDeleteProduct(product._id)}
-                className="btn btn-error border-0 mr-5"
+                className="btn btn-error border-0 mx-1 md:mr-5"
             >
+                <RiDeleteBin6Line />
                 Delete
             </button>
             <Link
@@ -71,7 +74,8 @@ export default function ManagePCard({ product, onDelete, index }) {
                 href={`/products/${product._id}`}
                 className="cursor-pointer bg-indigo-600 text-white py-5 rounded-lg px-7 border-0 btn font-medium hover:bg-indigo-700 transition"
             >
-                View
+               
+<IoArrowRedo /> View
             </Link>
         </div>
     );

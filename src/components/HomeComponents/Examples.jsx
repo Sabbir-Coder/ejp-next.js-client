@@ -20,7 +20,7 @@ import Image from "next/image";
 export default function Examples() {
     return (
         <div className="h-screen my-10">
-            <h1 className="text-5xl text-center my-9 font-bold">Sample Products</h1>
+            <h1 className="text-5xl font-bold  mb-4 bg-linear-to-r from-purple-900 via-blue-500 to-green-100 bg-clip-text text-transparent text-center">Sample Products</h1>
             <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
                 Explore a curated selection of premium product samples. Scroll vertically
                 to view each item with smooth and interactive transitions.

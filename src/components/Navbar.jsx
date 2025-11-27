@@ -12,7 +12,7 @@ import {
 
 export default function Navbar() {
     return (
-        <div className="px-10 mx-auto navbar shadow-sm">
+        <div className="md:px-10 bg-[#cecece] sticky top-0 z-50 mx-auto navbar shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,7 +20,7 @@ export default function Navbar() {
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-999 mt-3 w-52 p-2 shadow">
+                        className="font-bold text-gray-600 text-[16px] menu menu-sm dropdown-content bg-[#cecece] rounded-box z-999 mt-3 w-52 p-2 shadow">
                         <li><Link href='/'>Home</Link></li>
                         <li> <Link href='/products'>All Products</Link></li>
                         <li> <Link href='/add-product'>Add Product</Link></li>
@@ -31,7 +31,7 @@ export default function Navbar() {
                 <div className=""><Logo /></div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal font-bold text-gray-600 text-[16px] px-1">
                     <li> <Link href='/'>Home</Link></li>
                     <li> <Link href='/products'>All Products</Link></li>
                     <li> <Link href='/add-product'>Add Product</Link></li>

@@ -56,7 +56,7 @@ export default function Feature() {
         <section className="py-24 bg-gray-50">
             <div className="max-w-6xl mx-auto px-6 text-center">
                 {/* Heading */}
-                <h2 className="text-5xl font-bold text-gray-900 mb-4">
+                <h2 className="text-5xl font-bold  mb-4 bg-linear-to-r from-purple-900 via-blue-500 to-green-100 bg-clip-text text-transparent">
                     Our Features
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto mb-16">
