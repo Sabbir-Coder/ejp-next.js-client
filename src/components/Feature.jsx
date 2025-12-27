@@ -2,54 +2,50 @@
 import React from 'react'
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaShippingFast, FaStar, FaCreditCard, FaTags, FaBox, FaHeart, FaBolt, FaBullseye } from "react-icons/fa";
 
 export default function Feature() {
     const features = [
         {
             title: "Fast & Secure Delivery",
             desc: "Get your products delivered safely with real-time tracking.",
-            icon: "🚚",
+            icon: <FaShippingFast className="mx-auto text-blue-600" />,
         },
         {
             title: "Premium Quality Products",
             desc: "Only the highest-rated and verified items make it to our store.",
-            icon: "⭐",
+            icon: <FaStar className="mx-auto text-orange-500" />,
         },
-
-
         {
             title: "Secure Online Payment",
             desc: "Multiple payment methods with full encryption and fraud protection.",
-            icon: "💳",
+            icon: <FaCreditCard className="mx-auto text-blue-600" />,
         },
         {
             title: "Exclusive Member Discounts",
             desc: "Join our membership to enjoy special deals and early access sales.",
-            icon: "🏷️",
+            icon: <FaTags className="mx-auto text-orange-500" />,
         },
-
         {
             title: "Multiple Delivery Options",
             desc: "Choose from express, standard, or scheduled delivery slots.",
-            icon: "📦",
+            icon: <FaBox className="mx-auto text-blue-600" />,
         },
         {
             title: "Wishlist & Save for Later",
             desc: "Easily save your favorite products and buy them anytime.",
-            icon: "💖",
+            icon: <FaHeart className="mx-auto text-orange-500" />,
         },
         {
             title: "Flash Deals Everyday",
             desc: "Discover daily limited-time offers with huge discounts.",
-            icon: "⚡",
+            icon: <FaBolt className="mx-auto text-blue-600" />,
         },
         {
             title: "Personalized Recommendations",
             desc: "Get product suggestions based on your interests and history.",
-            icon: "🎯",
+            icon: <FaBullseye className="mx-auto text-orange-500" />,
         },
-
-
     ];
 
     return (

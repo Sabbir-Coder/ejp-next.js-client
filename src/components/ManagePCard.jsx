@@ -21,7 +21,7 @@ export default function ManagePCard({ product, onDelete, index }) {
 
         if (result.isConfirmed) {
             try {
-                const res = await fetch(`http://localhost:5000/products/${_id}`, {
+                const res = await fetch(`https://asset-verse-backend.vercel.app/products/${_id}`, {
                     method: 'DELETE'
                 });
                 const data = await res.json();

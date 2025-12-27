@@ -7,7 +7,7 @@ export default async function ProductDetails({ params }) {
   const { productId } = await params;
   // console.log(productId);
 
-  const res = await fetch(`http://localhost:5000/products/${productId}`)
+  const res = await fetch(`https://asset-verse-backend.vercel.app/products/${productId}`)
   const product = await res.json()
 
 
