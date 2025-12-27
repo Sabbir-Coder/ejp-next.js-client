@@ -8,7 +8,7 @@ export default function ProductPage() {
   const [sortOrder, setSortOrder] = useState(''); // '' | 'low-high' | 'high-low'
 
   useEffect(() => {
-    fetch('https://ejp-next-js-server.vercel.app/products')
+    fetch('http://localhost:5000/products')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error(err));
@@ -43,7 +43,7 @@ export default function ProductPage() {
       </p>
 
       <div className='flex flex-col md:flex-row justify-between items-center gap-4 mt-14'>
-    
+
         <label className="input border border-gray-300 bg-white flex items-center gap-2 grow md:grow-0">
           <svg className="h-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
@@ -60,7 +60,7 @@ export default function ProductPage() {
           />
         </label>
 
-    
+
         <select
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}

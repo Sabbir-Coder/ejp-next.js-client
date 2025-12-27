@@ -23,8 +23,8 @@ export default function Navbar() {
 
     const linkClass = (href) =>
         pathname === href
-            ? "text-emerald-500 font-bold border-b-2 border-emerald-500"
-            : "text-gray-600 hover:text-emerald-500";
+            ? "text-[#1746CC] font-bold border-b-3 border-[#E66D00]"
+            : "text-gray-600 hover:text-primary hover:border-[#E66D00]";
 
     return (
         <div className="md:px-10 bg-[#cecece] sticky top-0 z-50 mx-auto navbar shadow-sm">

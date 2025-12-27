@@ -21,7 +21,7 @@ export default function ManagePCard({ product, onDelete, index }) {
 
         if (result.isConfirmed) {
             try {
-                const res = await fetch(`https://ejp-next-js-server.vercel.app/products/${_id}`, {
+                const res = await fetch(`http://localhost:5000/products/${_id}`, {
                     method: 'DELETE'
                 });
                 const data = await res.json();
@@ -74,8 +74,8 @@ export default function ManagePCard({ product, onDelete, index }) {
                 href={`/products/${product._id}`}
                 className="cursor-pointer bg-indigo-600 text-white py-5 rounded-lg px-7 border-0 btn font-medium hover:bg-indigo-700 transition"
             >
-               
-<IoArrowRedo /> View
+
+                <IoArrowRedo /> View
             </Link>
         </div>
     );

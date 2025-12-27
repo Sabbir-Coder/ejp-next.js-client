@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 export default async function ProductPage() {
-  const data = await fetch('https://ejp-next-js-server.vercel.app/products')
+  const data = await fetch('http://localhost:5000/products')
   const products = await data.json()
   // console.log(products);
 

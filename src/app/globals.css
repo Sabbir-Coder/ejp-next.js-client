@@ -1,9 +1,29 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* NextBuy Light Theme */
+:root {
+  /* daisyUI theme variables (HSL values REQUIRED) */
+
+  --p: 220 100% 56%;   /* primary → blue */
+  --s: 120 100% 75%;    /* secondary → orange */
+  --a: 30 100% 55%;    /* accent → orange */
+
+  --n: 220 13% 18%;    /* neutral text */
+  --b1: 0 0% 100%;     /* base background */
+  --b2: 210 40% 96%;   /* soft background */
+  --bc: 220 13% 18%;   /* base text color */
+}
+/* Base document styling */
 html {
-  /* Default light theme */
   color-scheme: light;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

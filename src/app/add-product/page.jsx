@@ -15,7 +15,7 @@ export default function AddProduct() {
     const longDescription = e.target.longDescription.value;
     const price = e.target.price.value;
     const productImage = e.target.imageURL.files[0];
-    
+
 
     const formData = new FormData();
     formData.append("image", productImage);
@@ -35,11 +35,11 @@ export default function AddProduct() {
         price,
         image: uploadedImageUrl,
       };
-console.log(newProduct);
+      console.log(newProduct);
 
       // POST Product to Server
       const res = await fetch(
-        "https://ejp-next-js-server.vercel.app/products",
+        "http://localhost:5000/products",
         {
           method: "POST",
           headers: {
@@ -68,7 +68,7 @@ console.log(newProduct);
   return (
     <div className="card bg-[#cecece] my-15 mx-auto w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body py-12">
-        <h1 className="text-center text-3xl font-bold mb-5 bg-linear-to-r from-purple-900 via-blue-500 to-green-100 bg-clip-text text-transparent">
+        <h1 className="text-center text-3xl font-bold mb-5 text-[#1746CC]">
           Add A New Product
         </h1>
 
@@ -105,7 +105,7 @@ console.log(newProduct);
             name="description"
             className="textarea bg-white"
             placeholder="Product Short Description"
-            
+
           ></textarea>
           <label className="label">Long Description</label>
           <textarea
