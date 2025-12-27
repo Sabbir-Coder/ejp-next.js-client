@@ -9,7 +9,7 @@ export default function FeaturedCollection() {
         <section className="bg-gray-50 py-20">
             <div className="max-w-7xl mx-auto px-6 text-center">
 
-                  <h1 className="text-5xl font-bold  mb-4 bg-linear-to-r from-purple-900 via-blue-500 to-green-100 bg-clip-text text-transparent text-center">Featured Collection</h1>
+                <h1 className="text-5xl font-bold  mb-4 bg-linear-to-r from-purple-900 via-blue-500 to-green-100 bg-clip-text text-transparent text-center">Featured Collection</h1>
                 <p className="text-gray-500 mb-12">Handpicked items just for you. Premium quality, modern design.</p>
 
 
@@ -34,7 +34,7 @@ export default function FeaturedCollection() {
 
                     <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                         <div className="relative w-full h-64 object-cover">
-                              <Image fill src={airPod} alt="DJI Mini 3 Pro" className="w-full h-64 object-cover" />
+                            <Image fill src={airPod} alt="DJI Mini 3 Pro" className="w-full h-64 object-cover" />
                             <span className="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Hot</span>
                         </div>
                         <div className="p-6">
